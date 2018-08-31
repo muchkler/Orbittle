@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbittle | Share whatever's on your mind.</title>
+    <link rel="stylesheet" href="/css/edit.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
+<body>
+
+<div class="formWrapper2">
+<div class="formWrapper">
+    <h1>Update your post</h1>
+    <form action="/posts/<%= post._id%>/?_method=PUT" method="POST">
+        <div class="inputs">
+            <div class="titleInput"><input type="text" name="post[title]" placeholder="Title" required></div>
+            <div class="descInput"><textarea placeholder="Description (350 characters limit)" name="post[description]" cols="40" rows="5" maxlength = "350" required></textarea></div>
+            <div class="submitBTN"><button class="submit"><span class="sub">Submit</span></button></div>
+            <div class="backWrapper"><div class="back"><a href="/posts"><span class="sub">Go back to posts.</span></a></div></div>
+            <p><span>Disclaimer:</span> Please avoid using sexual and insulting titles and descriptions to  test out the website. Please keep it safe.</p>
+         </div>
+    </form>
+</div>
+</div>
+</body>
+</html>

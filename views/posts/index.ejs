@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbittle | Share whatever's on your mind.</title>
+    <link rel="stylesheet" href="/css/posts.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="navbar">
+    <ul>
+        <% if(!currentUser){ %>
+        <li class="animateborder"><a href="/login" class="item">Login</a></li>
+        <li class="animateborder"><a href="/register" class="item">Sign up</a></li>
+        <% } else{ %>
+            <li>Currently signed in as <%= currentUser.username %></li>
+            <li class="animateborder"><a href="/logout" class="item">Logout</a></li>
+        <% } %>
+    </ul>
+</div>
+
+
+<div class="centered">
+    <div class="logo"><img src="/images/download.png"></div>
+    <div class="buttonWrapper"><button class="newPost"><a href="/posts/new"><span>Create a new post</span></a></button></div>
+</div>
+
+<% posts.forEach(function(post){ %> 
+<div class="postWrapper">
+    <div class="postArea">
+        <div class="textWrapper">
+         <h2 class="postTitle"><%= post.title %></h2>
+         <p class="postDesc"><%= post.description %></p>
+         <div class="createByDiv"><p class="byDiv"><span class="createBy">Created by</span> <%=post.author.username%></p></div>
+    </div>
+        <div class="infoWrapper"><button class="moreInfos"><a href="/posts/<%=post._id%>" class="moreInfo"><span>View more</span></a></button></div>
+    </div>
+</div>
+<% }); %> 
+
+</body>
+</html>

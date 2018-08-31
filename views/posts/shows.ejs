@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=post.title%></title>
+    <link rel="stylesheet" href="/css/shows.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
+<body>
+
+<div class="navbar">
+    <ul>
+        <% if(!currentUser){ %>
+                    <li class="animateborder"><a href="/login" class="item">Login</a></li>
+        <li class="animateborder"><a href="/register" class="item">Sign up</a></li>
+        <% } else{ %>
+            <li class="animateborder"><a href="/logout" class="item">Logout</a></li>
+        <% } %>
+    </ul>
+</div>
+
+
+<div class="postBox">
+    <p class="titleBox"><%=post.title%></p> 
+    <p><%=post.description%></p>
+    <p class="byDiv"><span class="createBy">Created by</span> <%=post.author.username%></p> 
+</div>
+
+<div class="commentsBox">
+<% post.comments.forEach(function(comment){ %>
+    <div class="editGrid">
+        <div class="commentFull"><p><span class="authorSpan"><%=comment.author.username%></span> - <%=comment.text%></p></div>
+    <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+        <div class="editContainer"><div class="editWrapper"><a href="/posts/<%=post._id%>/comments/<%=comment._id%>/edit" class="editBtn">Edit comment</a></div></div>
+        <form action="/posts/<%=post._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+            <div class="deleteWrapper2"><input type="submit" value="Delete comment" class="deleteBtn2"></div>
+        </form>
+    <% } %>
+    </div>
+    <div class="timeDate">2 days ago</div>
+    <hr>
+<% }); %>
+</div>
+
+<% if(currentUser && post.author.id.equals(currentUser._id)){ %>
+    <form action="/posts/<%= post._id%>/?_method=DELETE" method="POST">
+        <div class="deleteWrapper"><button class="deletePost"><span class="delete">Delete Post</span></button></div>
+    </form>
+    <div class="buttonWrapper"><button class="addComment"><a href="/posts/<%=post._id%>/edit" class="comment"><span>Edit Post</span></a></button></div>
+<% } %>
+<div class="buttonWrapper"><button class="addComment"><a href="/posts/<%=post._id%>/comments/new" class="comment"><span>Add new comment</span></a></button></div>
+<div class="buttonWrapper"><button class="addComment"><a href="/posts/" class="comment"><span>Go back to posts</span></a></button></div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbittle | Share whatever's on your mind.</title>
+    <link rel="stylesheet" href="/css/register.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
+<body>
+
+    
+<div class="img"><img src="/images/download.png"></div>
+
+<div class="navbar">
+    <ul>
+        <% if(!currentUser){ %>
+        <li class="animateborder"><a href="/login" class="item">Login</a></li>
+        <li class="animateborder"><a href="/register" class="item">Sign up</a></li>
+        <% } else{ %>
+            <li class="animateborder"><a href="/logout" class="item">Logout</a></li>
+        <% } %>
+    </ul>
+</div>
+
+
+
+<div class="container">
+    <div class="header"><h1>Sign up</h1></div>
+        <div class="username">
+        <form action="/register" method="POST">
+            <p class="labels">Username</p>
+            <div class="inputDiv"><input type="text" name="username" placeholder="Username" required></div>
+        </div>
+        <div class="password">
+                <p class="labels">Password</p>
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+            <div class="btnWrapper"><button class="signBtn"><span>Sign up</span></button></div>
+        </form>
+</div>
+
+</body>
+</html>

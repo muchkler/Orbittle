@@ -1,0 +1,100 @@
+body{
+    background-color: #013243;
+    font-family: 'Roboto', sans-serif;  
+    margin: 20px;
+}
+
+
+.formWrapper2{
+    padding-top: 200px;
+}
+
+.formWrapper{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.header{
+    max-width: 250px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #013243;
+    text-align: center;
+    margin: 0 auto;
+    width: 250px;
+}
+
+
+.descriptionText{
+    text-align: center;
+}
+
+.authorText{
+    text-align: center; 
+    padding-top: 20px;
+}
+
+.submitBtn{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.btnClass{
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #013243;
+    width: 250px;
+    height: 25px;
+}
+.btnClass span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.btnClass span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.btnClass:hover span {
+    padding-right: 25px;
+  }
+  
+.btnClass:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.headerC{
+    font-weight: 100;   
+}
+
+.backPost{
+    color: white;
+}
+
+@media only screen and (min-width: 1080px){
+    .formWrapper{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .header{
+        max-width: 500px;
+    }
+}

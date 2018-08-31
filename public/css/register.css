@@ -1,0 +1,163 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto; 
+}
+
+.navbar li{
+    color: #707070;
+    display: inline-block;
+    padding: 20px;
+    font-weight: 600; 
+}
+
+.navbar ul{
+    padding-left: 0px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.item{
+    color: black;
+}
+
+.animateborder{
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.animateborder::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #446CB3;
+    transition: width .3s;  
+}
+
+.animateborder:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.img{
+    text-align: center; 
+    padding-top: 50px;
+}
+
+.container{
+    padding: 20px;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+}
+
+h1{
+    color: #013243;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.inputDiv{
+    padding-bottom: 20px;
+}
+
+.labels{
+    margin-bottom: 5px;
+    font-size: 14px;
+    max-width: 240px;
+    font-weight: 600;
+}
+
+.signBtn{
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #013243;
+    width: 150px;
+    height: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.signBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.signBtn:hover span {
+    padding-right: 25px;
+  }
+  
+.signBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.btnWrapper{
+    padding-top: 20px;
+}
+
+.error{
+    max-width: 200px;
+    margin: 0 auto;
+    background-color:#d91e18;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+}
+
+.errorWrapper{
+    padding-bottom: 10px;
+}
+
+.success{
+    max-width: 200px;
+    margin: 0 auto;
+    background-color:#3fc380;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+}
+
+.successWrapper{
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+

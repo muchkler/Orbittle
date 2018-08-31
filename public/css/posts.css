@@ -1,0 +1,274 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.centered{
+    text-align: center; 
+    padding-top: 50px;
+    margin: 0 auto; 
+    max-width: 450px;
+}
+
+.navbar{
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto; 
+}
+
+.navbar li{
+    color: #707070;
+    display: inline-block;
+    padding: 20px;
+    font-weight: 600; 
+}
+
+.navbar ul{
+    padding-left: 0px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.item{
+    color: #707070;
+}
+
+.animateborder{
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.animateborder::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #446CB3;
+    transition: width .3s;  
+}
+
+.animateborder:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.buttonWrapper{
+    text-align: center; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.newPost{
+    border: none;
+    border-radius: 20px;
+    background-color: #013243; 
+    font-weight: 600;
+    font-size: 12px;
+    height: 30px;
+    padding: 0px 15px 0px 15px; 
+}
+
+    .newPost span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .newPost span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .newPost:hover span {
+    padding-right: 25px;
+  }
+  
+  .newPost:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.postArea{
+    border-radius: 5px;
+    max-width: 350px;
+    text-align: center; 
+    color: #707070;
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+    margin: 0 auto; 
+}
+
+.postWrapper{
+    padding-top: 25px;
+    max-width: 320px; 
+    margin: 0 auto; 
+    
+}
+
+.postTitle{
+    padding-top: 10px;
+    font-size: 20px;
+    max-width: 300px;
+    margin: 0 auto; 
+}
+
+.postDesc{
+    font-weight: 100;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.tradeMark{
+    color: #636363;
+    text-align: center;
+    font-weight: 100; 
+    font-size: 14px;
+    position: absolute;
+    bottom: 0px;
+    left: 45px;
+}
+
+.infoWrapper{
+    padding-bottom: 15px;
+}
+
+.moreInfos{
+    border: none; 
+    border-radius: 20px; 
+    color: white; 
+    background-color: #013243; 
+    height: 25px;
+    padding: 0px 15px 0px 15px;
+    font-weight: 600;
+}
+
+.moreInfos span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .moreInfos span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .moreInfos:hover span {
+    padding-right: 25px;
+  }
+  
+  .moreInfos:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .createBy{
+    font-weight: 600;   
+}
+
+.byDiv{
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.error{
+    max-width: 200px;
+    margin: 0 auto;
+    background-color:#d91e18;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+}
+
+.errorWrapper{
+    padding-bottom: 10px;
+}
+
+.success{
+    max-width: 200px;
+    margin: 0 auto;
+    background-color:#3fc380;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+}
+
+.successWrapper{
+    padding-bottom: 10px;
+}
+/* Desktop Media Query */
+
+@media only screen and (min-width: 1080px){
+    .postArea{
+        padding-bottom: 20px;
+        max-width: 1500px;
+        text-align: left; 
+        height: 100px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        height: 150px;
+    }
+
+    .postTitle{
+        max-width: 1500px; 
+        padding-left: 20px;
+        padding-top: 25px;
+        padding-right: 0px;
+    }
+
+    .textWrapper{
+        max-width: 1800px;
+    }
+
+    .postWrapper{
+        max-width: 1500px;
+    }
+
+    .postDesc{
+        padding-left: 20px;
+        padding-bottom: 20px;
+        margin: 0px;
+        padding-top: 5px;
+        font-size: 12px;
+        max-width: 1500px;
+    }
+
+    .infoWrapper{
+        padding-bottom: 0px;
+        padding-top:  65px;
+        position: absolute; 
+        right: 300px;
+    }
+
+    .createBy{
+        padding-left: 20px;
+
+    }
+
+}
