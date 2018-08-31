@@ -46,12 +46,12 @@
 
 <% if(currentUser && post.author.id.equals(currentUser._id)){ %>
     <form action="/posts/<%= post._id%>/?_method=DELETE" method="POST">
-        <div class="deleteWrapper"><button class="deletePost"><span class="delete">Delete Post</span></button></div>
+        <div class="deleteContainer"><input type="submit" value="Delete Post" class="deleteWrapper"></div>
     </form>
-    <div class="buttonWrapper"><button class="addComment"><a href="/posts/<%=post._id%>/edit" class="comment"><span>Edit Post</span></a></button></div>
+    <div class="buttonWrapper"><a href="/posts/<%=post._id%>/edit" class="addComment"><span>Edit Post</span></a></div>
 <% } %>
-<div class="buttonWrapper"><button class="addComment"><a href="/posts/<%=post._id%>/comments/new" class="comment"><span>Add new comment</span></a></button></div>
-<div class="buttonWrapper"><button class="addComment"><a href="/posts/" class="comment"><span>Go back to posts</span></a></button></div>
+<div class="buttonWrapper"><a href="/posts/<%=post._id%>/comments/new" class="addComment"><span>Add new comment</span></a></div>
+<div class="buttonWrapper"><a href="/posts/" class="addComment"><span>Go back to posts</span></a></div>
 
 </body>
 </html>

@@ -137,24 +137,15 @@ a{
     padding-bottom: 15px;
 }
 
-.moreInfos{
-    border: none; 
-    border-radius: 20px; 
-    color: white; 
-    background-color: #013243; 
-    height: 25px;
-    padding: 0px 15px 0px 15px;
-    font-weight: 600;
-}
 
-.moreInfos span {
+.moreInfo span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .moreInfos span:after {
+  .moreInfo span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -163,11 +154,11 @@ a{
     transition: 0.5s;
   }
   
-  .moreInfos:hover span {
+  .moreInfo:hover span {
     padding-right: 25px;
   }
   
-  .moreInfos:hover span:after {
+  .moreInfo:hover span:after {
     opacity: 1;
     right: 0;
   }
@@ -227,6 +218,18 @@ a{
         padding-right: 50px;
     }
 
+.moreInfo{
+    border: none; 
+        background-color: #013243;
+        border-radius: 20px;
+        width: 150px;
+        height: 35px;
+        font-size: 15px;
+        font-weight: 600;
+        padding:10px;
+        padding-left: 50px;
+        padding-right: 50px;
+}
 /* Desktop Media Query */
 
 @media only screen and (min-width: 1080px){

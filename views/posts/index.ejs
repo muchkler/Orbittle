@@ -37,7 +37,7 @@
          <p class="postDesc"><%= post.description %></p>
          <div class="createByDiv"><p class="byDiv"><span class="createBy">Created by</span> <%=post.author.username%></p></div>
     </div>
-        <div class="infoWrapper"><button class="moreInfos"><a href="/posts/<%=post._id%>" class="moreInfo"><span>View more</span></a></button></div>
+        <div class="infoWrapper"><a href="/posts/<%=post._id%>" class="moreInfo"><span>View more</span></a></div>
     </div>
 </div>
 <% }); %> 

@@ -92,6 +92,10 @@ hr{
     background-color: #013243; 
     color: white;
     cursor: pointer; 
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
 }
 
 .addComment span {
@@ -140,46 +144,28 @@ hr{
 }
 
 .deleteWrapper{
+    max-width: 100px;
+    background-color: #F03434;
+    margin: 0 auto;
+    color: white;
     text-align: center;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.deleteWrapper:hover{
+    background-color: #ef4836;
+}
+
+.deleteContainer{
+    text-align: center; 
     padding-top: 20px;
 }
 
-.deletePost{
-    border: none;
-    border-radius: 20px;
-    width: 300px;
-    height: 30px;
-    font-weight: 600;
-    margin: 0 auto; 
-    background-color: #F03434;
-    color: white;
-    cursor: pointer; 
-}
-
-.deletePost span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-.deletePost span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-.deletePost:hover span {
-    padding-right: 25px;
-  }
-  
-.deletePost:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
 
 .editWrapper{
     background-color: #013243;
