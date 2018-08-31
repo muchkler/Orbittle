@@ -24,7 +24,7 @@
 <div class="postBox">
     <p class="titleBox"><%=post.title%></p> 
     <p><%=post.description%></p>
-    <p class="byDiv"><span class="createBy">Created by</span> <%=post.author.username%></p> 
+    <p class="byDiv"><span class="createBy">Created by</span> <%=post.author.username%>, <%= moment(post.createdAt).fromNow() %></p> 
 </div>
 
 <div class="commentsBox">
@@ -38,7 +38,7 @@
         </form>
     <% } %>
     </div>
-    <div class="timeDate">2 days ago</div>
+    <div class="timeDate"><%= moment(comment.createdAt).fromNow() %></div>
     <hr>
 <% }); %>
 </div>

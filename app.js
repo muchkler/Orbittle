@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
 var methodOverride = require('method-override');
+var moment = require('moment');
 Post = require('./models/posts');
 Comment = require('./models/comment');
 User = require('./models/user');
@@ -15,12 +16,13 @@ var commentRoutes = require('./routes/comments');
 var postsRoutes = require("./routes/posts");
 var indexRoutes = require('./routes/index');
 
-mongoose.connect("mongodb://localhost/orbittle");
+// mongoose.connect("mongodb://localhost/orbittle");
+mongoose.connect("mongodb://moemin:moemin1@ds239692.mlab.com:39692/orbittle");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set("view engine", "ejs"); 
 app.use(methodOverride("_method"));
-
+app.locals.moment = require('moment');
 
 // seedDB(); // Seed the DB.
 

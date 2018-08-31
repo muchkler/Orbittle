@@ -5,6 +5,7 @@ var postSchema = new mongoose.Schema({
     description: String,
     author: {
         id: {
+            createdAt: {type:Date, default:Date.now},
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
         },
