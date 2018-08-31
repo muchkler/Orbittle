@@ -49,7 +49,5 @@ app.use("/posts/:id/comments", commentRoutes);
 app.use("/posts", postsRoutes);
 
 
-app.listen(3000, function(){
-    console.log('Servers are all up and running now.'); 
-})
+app.listen(process.env.PORT || 3000);
    
