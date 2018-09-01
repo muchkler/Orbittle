@@ -15,7 +15,7 @@
     <h1>Create a new post</h1>
     <form action="/posts" method="POST">
         <div class="inputs">
-            <div class="titleInput"><input type="text" name="title" placeholder="Title" required></div>
+            <div class="titleInput"><input type="text" name="title" placeholder="Title" maxlength="50" required></div>
             <div class="descInput"><textarea placeholder="Description (350 characters limit)" name="description" cols="40" rows="5" maxlength = "350" required></textarea></div>
             <div class="submitBTN"><button class="submit"><span class="sub">Submit</span></button></div>
             <div class="backWrapper"><div class="back"><a href="/posts"><span class="sub">Go back to posts.</span></a></div></div>
